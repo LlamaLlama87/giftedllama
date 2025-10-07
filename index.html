@@ -4,48 +4,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Llama Deals</title>
+  <title>🦙 Today's Llama Deals</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9fafb;
+      font-family: 'Inter', Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      padding: 30px;
       margin: 0;
-      padding: 20px;
     }
-    h1 {
+
+    header {
       text-align: center;
-      color: #2c2c2c;
+      margin-bottom: 30px;
     }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 15px;
-      width: 250px;
-      text-align: center;
-    }
-    img {
-      max-width: 100%;
+
+    .logo {
+      width: clamp(80px, 12vw, 200px);
+      height: auto;
+      margin-bottom: 10px;
       border-radius: 8px;
     }
-    .title {
-      font-weight: bold;
-      margin: 10px 0;
+
+    h1 {
+      color: #2c2c2c;
+      font-size: 1.8em;
+      margin: 0;
     }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 1.1em;
+      font-weight: 600;
+      margin: 10px 0;
+      color: #333;
+    }
+
     .discount {
-      color: green;
+      color: #008000;
       font-weight: bold;
+      margin: 5px 0;
+    }
+
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .disclaimer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #888;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+      }
+      .card {
+        padding: 12px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>🦙 Today's Llama Deals</h1>
+  <header>
+    <img src="https://cdn.shopify.com/s/files/1/0828/1692/5979/files/giftedllama_website_logo.png?v=1759870206" alt="Llama Deals Logo" class="logo">
+    <h1>🦙 Today's Llama Deals</h1>
+  </header>
+
   <div class="grid">
 
     <div class="card">
@@ -126,5 +200,12 @@
     </div>
   
   </div>
+  <p class="disclaimer">
+    <em>As an Amazon Associate, we earn from qualifying purchases. Prices and discounts are accurate as of the time of posting and subject to change.</em>
+  </p>
+
+  <footer>
+    Last updated: 10/7/2025, 8:55:35 PM
+  </footer>
 </body>
 </html>
